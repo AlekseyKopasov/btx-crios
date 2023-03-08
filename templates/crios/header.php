@@ -1,29 +1,28 @@
 <?
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); 
 
 use Bitrix\Main\Page\Asset;
 
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); 
-
 $asset = Asset::getInstance();
-$asset->addCss(SITE_TEMPLATE_PATH . "css/styles.css");
-$asset->addJs(SITE_TEMPLATE_PATH . "js/main.js");
+
+$asset->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 ?>
 <!doctype html>
 <html lang="ru">
 
 <head>
-  <link rel="preload" href="<?SITE_TEMPLATE_PATH?> . assets/fonts/montserrat-regular.woff2" as="font"
+  <link rel="preload" href="<?php SITE_TEMPLATE_PATH?> . /assets/fonts/montserrat-regular.woff2" as="font"
     type="font/woff2" crossorigin="anonymous">
-  <link rel="icon" href="<?SITE_TEMPLATE_PATH?> . assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="<?SITE_TEMPLATE_PATH?> . assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="<?php SITE_TEMPLATE_PATH?> . /assets/local/templates/crios/assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="<?php SITE_TEMPLATE_PATH?> . /assets/local/templates/crios/assets/images/favicon.ico" type="image/x-icon" />
   
-  <?$APPLICATION->ShowHead();?>
+  <?php $APPLICATION->ShowHead()?>
 
-  <title><?$APPLICATION->ShowTitle();?></title>
+  <title><?php $APPLICATION->ShowTitle()?></title>
 </head>
 
 <body>
-  <?$APPLICATION->ShowPanel();?>
+  <?php $APPLICATION->ShowPanel()?>
 
   <header class="main-header">
     <div class="main-header__top">
