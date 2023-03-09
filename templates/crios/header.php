@@ -6,16 +6,15 @@ use Bitrix\Main\Page\Asset;
 $asset = Asset::getInstance();
 
 $asset->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
+$asset->addString('<link rel="preload" href="' . SITE_TEMPLATE_PATH . '/assets/fonts/montserrat-regular.woff2" as="font"
+type="font/woff2" crossorigin="anonymous">');
+$asset->addString('<link rel="icon" href="' . SITE_TEMPLATE_PATH . '/assets/images/favicon.ico" type="image/x-icon" />');
+$asset->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH . '/assets/images/favicon.ico" type="image/x-icon" />');
 ?>
 <!doctype html>
 <html lang="ru">
 
-<head>
-  <link rel="preload" href="<?php SITE_TEMPLATE_PATH?> . /assets/fonts/montserrat-regular.woff2" as="font"
-    type="font/woff2" crossorigin="anonymous">
-  <link rel="icon" href="<?php SITE_TEMPLATE_PATH?> . /assets/local/templates/crios/assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="<?php SITE_TEMPLATE_PATH?> . /assets/local/templates/crios/assets/images/favicon.ico" type="image/x-icon" />
-  
+<head>  
   <?php $APPLICATION->ShowHead()?>
 
   <title><?php $APPLICATION->ShowTitle()?></title>
