@@ -10,4 +10,6 @@ node_modules/
 npm-debug.*
 Thumbs.db
 crios-html/
+gluttonous_layout-master/
+templates/gluttonous/
 php_interface/vendor/
